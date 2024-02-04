@@ -1,23 +1,28 @@
-#include <vector>
-#include <algorithm>
-#include <iostream>
+// Include necessary libraries
+#include <vector>    // For using vector data structure
+#include <algorithm> // For using algorithms like std::reverse
+#include <iostream>  // For input/output operations
 
-void rotate(std::vector<int>& nums, int k) {
-    k %= nums.size();
-    std::reverse(nums.begin(), nums.end());
-    std::reverse(nums.begin(), nums.begin() + k);
-    std::reverse(nums.begin() + k, nums.end());
+// Function to rotate an array
+void rotate(int nums[], int n, int k) {
+    k %= n;  // Ensure k is less than n
+    std::reverse(nums, nums + n);  // Reverse the entire array
+    std::reverse(nums, nums + k);  // Reverse the first 'k' elements
+    std::reverse(nums + k, nums + n);  // Reverse the remaining elements
 }
 
+// Main function
 int main() {
-    std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7};
-    int k = 3;
-    rotate(nums, k);
+    int nums[] = {1, 2, 3, 4, 5, 6, 7};  // Initialize the array
+    int n = sizeof(nums) / sizeof(nums[0]);  // Calculate the size of the array
+    int k = 3;  // Set the number of positions to rotate
+    rotate(nums, n, k);  // Call the rotate function
 
     // Print the rotated array
-    for(int num : nums) {
-        std::cout << num << ' ';
+    for(int i = 0; i < n; i++) {
+        std::cout << nums[i] << ' ';  // Print each element followed by a space
     }
 
-    return 0;
+    return 0;  // Return 0 indicating successful execution
 }
+
