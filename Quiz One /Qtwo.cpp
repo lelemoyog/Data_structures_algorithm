@@ -1,3 +1,7 @@
+/* 
+It is better to have a comment here mentioning the question (problem you are solb=ving and explaining your solution
+*/
+
 // Include necessary libraries
 #include <vector>    // For using vector data structure
 #include <algorithm> // For using algorithms like std::reverse
