@@ -1,3 +1,6 @@
+/* 
+It is better to have a comment here mentioning the question (problem you are solb=ving and explaining your solution
+*/
 #include <iostream>
 
 using namespace std;
