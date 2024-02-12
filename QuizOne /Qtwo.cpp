@@ -7,6 +7,9 @@ It is better to have a comment here mentioning the question (problem you are sol
 #include <algorithm> // For using algorithms like std::reverse
 #include <iostream>  // For input/output operations
 
+/*
+The aim of the assignment is that you actually code the methods ---> Do not use the predifined methods in the Programing Language
+*/
 // Function to rotate an array
 void rotate(int nums[], int n, int k) {
     k %= n;  // Ensure k is less than n
