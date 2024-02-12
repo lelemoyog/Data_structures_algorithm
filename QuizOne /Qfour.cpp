@@ -1,5 +1,13 @@
+/* 
+It is better to have a comment here mentioning the question (problem you are solb=ving and explaining your solution
+*/
+
 // Include necessary library
 #include <iostream>  // For input/output operations
+
+/*
+    Can we do this method without the two loops (Less Time - e.g. Linear Time) ?
+*/
 
 // Function to find the number that appears only once in the array
 int singleNumber(int nums[], int n) {

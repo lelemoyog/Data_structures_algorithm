@@ -1,7 +1,14 @@
+/* 
+It is better to have a comment here mentioning the question (problem you are solb=ving and explaining your solution
+*/
 #include <iostream>
 
 using namespace std;
 
+/*
+   This function will run in quadratic time
+   Do you think there is another way we can write this to take less time? e.g. Use only one loop?
+*/
 int removeDuplicates(int nums[], int n) {
    
     int i = 0; // i is the index of the last unique element
