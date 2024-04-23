@@ -20,8 +20,6 @@
 // ●	-105 <= Node.val <= 105
 // ●	pos is -1 or a valid index in the linked-list.     Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
-// write your code here
-// do not use the predefined methods
 
 #include <iostream>
 #include <vector>
@@ -34,23 +32,6 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-// Function to check if there is a cycle in the linked list
-bool hasCycle(ListNode *head) {
-    // Initialize two pointers, slow and fast
-    ListNode *slow = head;
-    ListNode *fast = head;
-    // Loop until fast reaches the end of the list
-    while (fast != NULL && fast->next != NULL) {
-        // Move slow one step and fast two steps
-        slow = slow->next;
-        fast = fast->next->next;
-        // If there is a cycle, the two pointers will meet
-        if (slow == fast) {
-            return true;  // Return true if there is a cycle
-        }
-    }
-    return false;  // Return false if there is no cycle
-}
 
 // Function to find the node where the cycle begins
 ListNode *detectCycle(ListNode *head) {
