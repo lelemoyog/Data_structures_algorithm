@@ -1,5 +1,17 @@
 /* 
-It is better to have a comment here mentioning the question (problem you are solb=ving and explaining your solution
+Remove Duplicates from Sorted Array.
+# Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+*/
+/*(
+Pseudocode
+-->function removeDuplicate takes in array[] and number of element
+   intialize i the index of the last unique element
+    loop thru the array[j]
+      create a second loop array[k] to compair with the element in the first loop
+       check if(array[j] == array[k])
+          breake loop
+    check if( k == i)
+
 */
 #include <iostream>
 

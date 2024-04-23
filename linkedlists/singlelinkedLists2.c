@@ -29,11 +29,11 @@ int main() {
     head->data = 98;
     head->link = NULL;
     
-    struct node *current = malloc(sizeof(struct node));
+   
+     struct node *current = malloc(sizeof(struct node));
     current->data = 45;
     current->link = NULL;
     head->link = current;
-    
     
     current = malloc(sizeof(struct node));
 

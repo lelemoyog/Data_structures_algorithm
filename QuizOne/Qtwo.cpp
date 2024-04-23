@@ -13,9 +13,22 @@ The aim of the assignment is that you actually code the methods ---> Do not use 
 // Function to rotate an array
 void rotate(int nums[], int n, int k) {
     k %= n;  // Ensure k is less than n
-    std::reverse(nums, nums + n);  // Reverse the entire array
-    std::reverse(nums, nums + k);  // Reverse the first 'k' elements
-    std::reverse(nums + k, nums + n);  // Reverse the remaining elements
+    int temp[n];  // Create a temporary array to hold the rotated elements
+
+    // Copy the last 'k' elements to the temporary array
+    for(int i = 0; i < k; i++) {
+        temp[i] = nums[n - k + i];
+    }
+
+    // Shift the first 'n - k' elements to the right by 'k' positions
+    for(int i = n - 1; i >= k; i--) {
+        nums[i] = nums[i - k];
+    }
+
+    // Copy the temporary array (which holds the last 'k' elements) to the beginning of the array
+    for(int i = 0; i < k; i++) {
+        nums[i] = temp[i];
+    }
 }
 
 // Main function
